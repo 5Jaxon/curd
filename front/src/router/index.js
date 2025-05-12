@@ -1,5 +1,4 @@
 import {createRouter,createWebHashHistory} from 'vue-router'
-import { compareTime } from 'element-plus/es/components/time-select/src/utils.mjs';
 
 const routes=[
     {
@@ -49,7 +48,7 @@ const router=createRouter({
 });
 
 router.beforeEach((to,from)=>{
-    if(from.name='login'&&!sessionStorage.getItem('token')&&to.name!='login')return false;
+    if(from.name=='login'&&!sessionStorage.getItem('token')&&to.name!='login')return false;
 })
 export default router;
 
